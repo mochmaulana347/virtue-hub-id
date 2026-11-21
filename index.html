@@ -4,22 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Virtue Hub — Semua Web Gue, Satu Pintu</title>
-<meta name="description" content="Semua web Virtue yang live di Vercel: Warung Panel, VPN Rental, SlowX Converter, slowx-stats, VirtueDash, dan semua project lainnya.">
+<meta name="description" content="Semua web Virtue yang live di Vercel: Warung Panel, VPN Rental, SlowX Converter, slowx-stats, VirtueDash, TV Indo, dan semua project lainnya — satu pintu, klik langsung buka.">
+<link rel="canonical" href="https://adams-hub.vercel.app/">
+<meta name="theme-color" content="#06070d">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Virtue Hub">
+<meta property="og:title" content="Virtue Hub — Semua Web Gue, Satu Pintu">
+<meta property="og:description" content="Warung, VPN, converter, dashboard, sampai semua project lama — semua web Virtue yang live di Vercel ada di sini.">
+<meta property="og:url" content="https://adams-hub.vercel.app/">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Virtue Hub — Semua Web Gue, Satu Pintu">
+<meta name="twitter:description" content="Semua web Virtue yang live di Vercel — satu pintu, klik langsung buka.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Virtue Hub","description":"Semua web Virtue yang live di Vercel","url":"https://adams-hub.vercel.app/","itemListElement":[
+{"@type":"ListItem","position":1,"name":"TV Indo","url":"https://tv-indo-three.vercel.app"},
+{"@type":"ListItem","position":2,"name":"Warung Panel","url":"https://warung-panel.vercel.app"},
+{"@type":"ListItem","position":3,"name":"VPN Rental","url":"https://vpn-rental.vercel.app"},
+{"@type":"ListItem","position":4,"name":"SlowX Converter","url":"https://slowx-converter.vercel.app"},
+{"@type":"ListItem","position":5,"name":"slowx-stats","url":"https://slowx-stats.vercel.app"},
+{"@type":"ListItem","position":6,"name":"VirtueDash","url":"https://virtuedash-mochmaulana347s-projects.vercel.app"},
+{"@type":"ListItem","position":7,"name":"VESPER Affiliate","url":"https://vesper-af.vercel.app"},
+{"@type":"ListItem","position":8,"name":"ClipMaster AI","url":"https://autoclipper-xi.vercel.app"},
+{"@type":"ListItem","position":9,"name":"VEYNA Marketplace","url":"https://virtueweb.vercel.app"},
+{"@type":"ListItem","position":10,"name":"Katalog Demo","url":"https://katalog1.vercel.app"},
+{"@type":"ListItem","position":11,"name":"Cool Cat Catalog","url":"https://katalog.vercel.app"},
+{"@type":"ListItem","position":12,"name":"Landing Page","url":"https://landingpage-seven-blush.vercel.app"},
+{"@type":"ListItem","position":13,"name":"Hacker Theme","url":"https://virtue-five.vercel.app"}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#050807;
-  --bg2:#0a120d;
-  --lime:#b8f135;
-  --lime2:#7ee787;
-  --green:#123524;
-  --card:#0d1710;
-  --line:rgba(184,241,53,.14);
-  --text:#eef7e6;
-  --muted:#9db3a0;
-  --radius:22px;
+  --bg:#06070d;
+  --bg2:#0a0c16;
+  --violet:#8b5cf6;
+  --cyan:#22d3ee;
+  --fuchsia:#e879f9;
+  --grad:linear-gradient(92deg,#a78bfa 0%,#22d3ee 48%,#e879f9 100%);
+  --card:rgba(255,255,255,.032);
+  --card2:rgba(255,255,255,.055);
+  --line:rgba(255,255,255,.09);
+  --line2:rgba(139,92,246,.45);
+  --text:#eef2ff;
+  --muted:#94a3b8;
+  --radius:20px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -30,66 +61,69 @@ body{
   overflow-x:hidden;
   min-height:100vh;
 }
-::selection{background:var(--lime);color:#06110d}
+::selection{background:var(--violet);color:#fff}
 h1,h2,h3,.display{font-family:'Space Grotesk','Inter',system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
 
 /* ---------- background fx ---------- */
-#bg-canvas{position:fixed;inset:0;z-index:0;opacity:.55;pointer-events:none}
-.orb{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none;opacity:.5}
-.orb.a{width:520px;height:520px;background:#1d5c33;top:-160px;left:-120px;animation:drift1 22s ease-in-out infinite alternate}
-.orb.b{width:460px;height:460px;background:#5a7d12;bottom:-180px;right:-100px;animation:drift2 26s ease-in-out infinite alternate}
-.orb.c{width:300px;height:300px;background:#0e4d2e;top:38%;left:55%;animation:drift3 30s ease-in-out infinite alternate}
-@keyframes drift1{to{transform:translate(90px,60px) scale(1.15)}}
-@keyframes drift2{to{transform:translate(-80px,-70px) scale(1.1)}}
-@keyframes drift3{to{transform:translate(-110px,50px) scale(.85)}}
+#bg-canvas{position:fixed;inset:0;z-index:0;opacity:.5;pointer-events:none}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);z-index:0;pointer-events:none;opacity:.55}
+.orb.a{width:560px;height:560px;background:#5b21b6;top:-180px;left:-140px;animation:drift1 24s ease-in-out infinite alternate}
+.orb.b{width:480px;height:480px;background:#0e7490;bottom:-200px;right:-120px;animation:drift2 28s ease-in-out infinite alternate}
+.orb.c{width:320px;height:320px;background:#a21caf;top:36%;left:58%;animation:drift3 32s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(100px,70px) scale(1.15)}}
+@keyframes drift2{to{transform:translate(-90px,-80px) scale(1.12)}}
+@keyframes drift3{to{transform:translate(-120px,60px) scale(.85)}}
 .grid-overlay{
   position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(184,241,53,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(184,241,53,.045) 1px,transparent 1px);
-  background-size:56px 56px;
+  background-image:linear-gradient(rgba(139,92,246,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.05) 1px,transparent 1px);
+  background-size:54px 54px;
   mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 30%,transparent 75%);
 }
 #cursor-glow{
-  position:fixed;width:340px;height:340px;border-radius:50%;pointer-events:none;z-index:1;
-  background:radial-gradient(circle,rgba(184,241,53,.09),transparent 65%);
+  position:fixed;width:360px;height:360px;border-radius:50%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle,rgba(139,92,246,.12),transparent 65%);
   transform:translate(-50%,-50%);transition:opacity .3s;opacity:0;
 }
 
 /* ---------- layout ---------- */
 .wrap{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 22px}
 header.topbar{
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
   padding:20px 0;animation:fadeDown .8s ease both;
 }
 .logo{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.5px;text-decoration:none;color:var(--text)}
 .logo .bolt{
   width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--lime),#5da92e);color:#06110d;
-  box-shadow:0 0 0 1px rgba(184,241,53,.35),0 8px 24px rgba(184,241,53,.28);
-  animation:pulseGlow 2.6s ease-in-out infinite;
+  background:var(--grad);color:#0b0616;
+  box-shadow:0 0 0 1px rgba(167,139,250,.4),0 8px 24px rgba(139,92,246,.35);
+  animation:pulseGlow 2.8s ease-in-out infinite;
 }
-@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 1px rgba(184,241,53,.35),0 8px 24px rgba(184,241,53,.28)}50%{box-shadow:0 0 0 1px rgba(184,241,53,.6),0 8px 34px rgba(184,241,53,.5)}}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 1px rgba(167,139,250,.4),0 8px 24px rgba(139,92,246,.35)}50%{box-shadow:0 0 0 1px rgba(167,139,250,.65),0 8px 34px rgba(139,92,246,.55)}}
 .logo small{color:var(--muted);font-weight:500;font-size:12px;letter-spacing:1.5px}
 .pill-live{
-  display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--lime2);
-  background:rgba(126,231,135,.08);border:1px solid rgba(126,231,135,.25);
-  padding:8px 14px;border-radius:999px;
+  display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#67e8f9;
+  background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.28);
+  padding:8px 14px;border-radius:999px;white-space:nowrap;
 }
-.dot{width:8px;height:8px;border-radius:50%;background:#3ddc5f;box-shadow:0 0 0 0 rgba(61,220,95,.6);animation:ping 1.8s ease-out infinite}
-@keyframes ping{0%{box-shadow:0 0 0 0 rgba(61,220,95,.55)}100%{box-shadow:0 0 0 9px rgba(61,220,95,0)}}
+.dot{width:8px;height:8px;border-radius:50%;background:#22d3ee;box-shadow:0 0 0 0 rgba(34,211,238,.6);animation:ping 1.8s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(34,211,238,.55)}100%{box-shadow:0 0 0 9px rgba(34,211,238,0)}}
 
 /* ---------- hero ---------- */
-.hero{padding:74px 0 30px;text-align:center}
+.hero{padding:76px 0 30px;text-align:center}
 .eyebrow{
-  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--lime);
-  border:1px solid var(--line);background:rgba(184,241,53,.06);padding:8px 16px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#c4b5fd;
+  border:1px solid rgba(139,92,246,.35);background:rgba(139,92,246,.08);padding:8px 16px;border-radius:999px;
   animation:fadeUp .8s .1s ease both;
 }
 .hero h1{
-  font-size:clamp(44px,8.5vw,86px);line-height:.98;letter-spacing:-3px;font-weight:700;
+  font-size:clamp(44px,8.5vw,88px);line-height:.98;letter-spacing:-3px;font-weight:700;
   margin:26px 0 20px;animation:fadeUp .8s .22s ease both;
 }
 .hero h1 .grad{
-  background:linear-gradient(92deg,var(--lime) 10%,#5eeaa0 45%,#7ee787 70%,var(--lime) 100%);
+  background:var(--grad);
   background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
   animation:shimmer 5s linear infinite;
 }
@@ -102,12 +136,12 @@ header.topbar{
 /* stats */
 .stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:38px 0 8px;animation:fadeUp .8s .46s ease both}
 .stat{
-  background:rgba(13,23,16,.72);border:1px solid var(--line);border-radius:16px;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;
   padding:16px 22px;min-width:150px;text-align:center;backdrop-filter:blur(8px);
   transition:transform .3s,border-color .3s;
 }
-.stat:hover{transform:translateY(-4px);border-color:rgba(184,241,53,.4)}
-.stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:32px;letter-spacing:-1px;color:var(--lime)}
+.stat:hover{transform:translateY(-4px);border-color:var(--line2)}
+.stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:32px;letter-spacing:-1px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .stat span{font-size:12.5px;color:var(--muted);letter-spacing:.4px}
 
 /* marquee */
@@ -115,76 +149,77 @@ header.topbar{
   margin:44px -22px 0;overflow:hidden;white-space:nowrap;
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   padding:13px 0;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
 }
-.marquee-track{display:inline-block;animation:scrollX 26s linear infinite;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;letter-spacing:2.5px;color:var(--muted)}
-.marquee-track i{color:var(--lime);font-style:normal;margin:0 14px}
+.marquee-track{display:inline-block;animation:scrollX 28s linear infinite;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;letter-spacing:2.5px;color:var(--muted)}
+.marquee-track i{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal;margin:0 14px}
 @keyframes scrollX{to{transform:translateX(-50%)}}
 
 /* ---------- toolbar ---------- */
 .toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:52px 0 22px}
 .search{
   flex:1;min-width:230px;display:flex;align-items:center;gap:10px;
-  background:rgba(13,23,16,.8);border:1px solid var(--line);border-radius:14px;padding:12px 16px;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;
   transition:border-color .25s,box-shadow .25s;
 }
-.search:focus-within{border-color:rgba(184,241,53,.55);box-shadow:0 0 0 4px rgba(184,241,53,.1)}
+.search:focus-within{border-color:rgba(139,92,246,.6);box-shadow:0 0 0 4px rgba(139,92,246,.14)}
 .search svg{flex:none;opacity:.6}
 .search input{flex:1;background:none;border:0;outline:0;color:var(--text);font:inherit;font-size:15px}
-.search input::placeholder{color:#6f8577}
+.search input::placeholder{color:#64748b}
 .search kbd{
   font:600 11px 'Inter',sans-serif;color:var(--muted);border:1px solid var(--line);
   border-radius:6px;padding:3px 7px;background:rgba(255,255,255,.03);
 }
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{
-  cursor:pointer;border:1px solid var(--line);background:rgba(13,23,16,.8);color:var(--muted);
+  cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--muted);
   font:600 13.5px 'Inter',sans-serif;padding:10px 16px;border-radius:999px;transition:all .25s;
 }
-.chip:hover{color:var(--text);border-color:rgba(184,241,53,.4)}
-.chip.active{background:var(--lime);color:#06110d;border-color:var(--lime);box-shadow:0 6px 20px rgba(184,241,53,.3)}
+.chip:hover{color:var(--text);border-color:var(--line2)}
+.chip.active{background:var(--grad);color:#0b0616;border-color:transparent;box-shadow:0 6px 20px rgba(139,92,246,.4)}
 
 /* ---------- cards ---------- */
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding-bottom:10px}
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
 .card{
   position:relative;border-radius:var(--radius);padding:26px;overflow:hidden;
-  background:linear-gradient(160deg,rgba(19,32,22,.92),rgba(10,18,13,.92));
+  background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
   border:1px solid var(--line);
   transform-style:preserve-3d;transition:border-color .3s,box-shadow .3s;
   will-change:transform;
 }
 .card::before{
   content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;pointer-events:none;
-  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(184,241,53,.13),transparent 65%);
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(139,92,246,.16),transparent 65%);
 }
 .card:hover::before{opacity:1}
-.card:hover{border-color:rgba(184,241,53,.45);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(184,241,53,.08)}
+.card:hover{border-color:var(--line2);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(139,92,246,.1)}
 .card.hidden-card{display:none}
 .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .icon{
   width:54px;height:54px;border-radius:16px;display:grid;place-items:center;flex:none;
   font-size:26px;
 }
-.icon.store{background:linear-gradient(135deg,#1d5c33,#0e3a1e);box-shadow:inset 0 0 0 1px rgba(184,241,53,.3)}
-.icon.vpn{background:linear-gradient(135deg,#173a5e,#0e2237);box-shadow:inset 0 0 0 1px rgba(96,165,250,.35)}
-.icon.tool{background:linear-gradient(135deg,#5e3a17,#37220e);box-shadow:inset 0 0 0 1px rgba(251,191,36,.35)}
-.icon.stat{background:linear-gradient(135deg,#3a175e,#220e37);box-shadow:inset 0 0 0 1px rgba(192,132,252,.35)}
-.icon.tv{background:linear-gradient(135deg,#8a1f1f,#3d0e0e);box-shadow:inset 0 0 0 1px rgba(255,90,60,.35)}
+.icon.store{background:linear-gradient(135deg,#166534,#052e16);box-shadow:inset 0 0 0 1px rgba(74,222,128,.35)}
+.icon.vpn{background:linear-gradient(135deg,#1e40af,#0c1a3d);box-shadow:inset 0 0 0 1px rgba(96,165,250,.4)}
+.icon.tool{background:linear-gradient(135deg,#92400e,#3a2205);box-shadow:inset 0 0 0 1px rgba(251,191,36,.35)}
+.icon.stat{background:linear-gradient(135deg,#6b21a8,#2e1065);box-shadow:inset 0 0 0 1px rgba(192,132,252,.4)}
+.icon.tv{background:linear-gradient(135deg,#991b1b,#450a0a);box-shadow:inset 0 0 0 1px rgba(248,113,113,.35)}
 .tag{
   font:600 11.5px 'Inter',sans-serif;letter-spacing:1.2px;text-transform:uppercase;
-  padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:var(--lime);
-  background:rgba(184,241,53,.07);white-space:nowrap;
+  padding:6px 11px;border-radius:999px;border:1px solid rgba(139,92,246,.35);color:#c4b5fd;
+  background:rgba(139,92,246,.08);white-space:nowrap;
 }
 .card h3{font-size:24px;letter-spacing:-.6px;margin:18px 0 8px}
 .card h3 a{color:var(--text);text-decoration:none}
-.card h3 a:hover{color:var(--lime)}
+.card h3 a:hover{color:#a78bfa}
 .card p.desc{color:var(--muted);font-size:15px;line-height:1.65;min-height:72px}
-.card .url{font:500 13px ui-monospace,'SF Mono',Menlo,Consolas,monospace;color:#7d927f;margin:14px 0 18px;word-break:break-all}
+.card .url{font:500 13px ui-monospace,'SF Mono',Menlo,Consolas,monospace;color:#7d8aa5;margin:14px 0 18px;word-break:break-all}
 .card .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
 .meta span{font:500 12.5px 'Inter',sans-serif;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:6px 10px;border-radius:8px}
-.status{display:flex;align-items:center;gap:7px;font:600 12.5px 'Inter',sans-serif;color:#3ddc5f}
+.status{display:flex;align-items:center;gap:7px;font:600 12.5px 'Inter',sans-serif;color:#22d3ee}
 .status.checking{color:var(--muted)}
-.status.checking .dot{background:#8a9a8d;animation:none}
+.status.checking .dot{background:#64748b;animation:none}
 .actions{display:flex;gap:10px}
 .btn{
   flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -192,11 +227,11 @@ header.topbar{
   padding:13px 16px;border-radius:13px;cursor:pointer;border:0;transition:transform .2s,box-shadow .25s,background .25s;
 }
 .btn:active{transform:scale(.97)}
-.btn-primary{background:linear-gradient(135deg,var(--lime),#8fd41f);color:#06110d;box-shadow:0 8px 22px rgba(184,241,53,.28)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(184,241,53,.4)}
+.btn-primary{background:var(--grad);color:#0b0616;box-shadow:0 8px 22px rgba(139,92,246,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(139,92,246,.5)}
 .btn-ghost{background:rgba(255,255,255,.05);color:var(--text);border:1px solid rgba(255,255,255,.1);flex:0 0 auto;padding:13px 15px}
 .btn-ghost:hover{background:rgba(255,255,255,.09)}
-.btn-ghost.copied{color:var(--lime);border-color:rgba(184,241,53,.5)}
+.btn-ghost.copied{color:#67e8f9;border-color:rgba(34,211,238,.5)}
 .empty{
   display:none;text-align:center;color:var(--muted);padding:52px 10px 30px;font-size:15px;
 }
@@ -212,14 +247,20 @@ footer{
   margin-top:64px;padding:34px 0 44px;text-align:center;color:var(--muted);font-size:13.5px;
   border-top:1px solid var(--line);
 }
-footer .heart{color:var(--lime)}
-footer a{color:var(--text);text-decoration:none;border-bottom:1px dotted rgba(184,241,53,.5)}
-footer a:hover{color:var(--lime)}
+footer .heart{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+footer a{color:var(--text);text-decoration:none;border-bottom:1px dotted rgba(139,92,246,.55)}
+footer a:hover{color:#a78bfa}
 .back-top{
   display:inline-flex;margin-top:18px;cursor:pointer;font:600 13px 'Inter',sans-serif;color:var(--muted);
   background:none;border:1px solid var(--line);padding:9px 16px;border-radius:999px;transition:all .25s;
 }
-.back-top:hover{color:var(--lime);border-color:rgba(184,241,53,.45)}
+.back-top:hover{color:#c4b5fd;border-color:var(--line2)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
@@ -234,7 +275,7 @@ footer a:hover{color:var(--lime)}
       <span class="bolt">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
       </span>
-      VIRTUE<span style="color:var(--lime)">.HUB</span>
+      VIRTUE<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">.HUB</span>
       <small>VERCEL</small>
     </a>
     <span class="pill-live"><span class="dot"></span><span id="live-count">13 web live</span></span>
@@ -260,10 +301,10 @@ footer a:hover{color:var(--lime)}
   <div class="toolbar reveal">
     <label class="search">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
-      <input id="search" type="text" placeholder="Cari web… misal vpn, warung, converter" autocomplete="off">
+      <input id="search" type="text" placeholder="Cari web… misal vpn, warung, converter" autocomplete="off" aria-label="Cari web">
       <kbd>/</kbd>
     </label>
-    <div class="chips" id="chips">
+    <nav class="chips" id="chips" aria-label="Filter kategori">
       <button class="chip active" data-cat="all">Semua</button>
       <button class="chip" data-cat="toko">Toko</button>
       <button class="chip" data-cat="vpn">VPN</button>
@@ -271,10 +312,218 @@ footer a:hover{color:var(--lime)}
       <button class="chip" data-cat="dashboard">Dashboard</button>
       <button class="chip" data-cat="hiburan">Hiburan</button>
       <button class="chip" data-cat="lainnya">Lainnya</button>
-    </div>
+    </nav>
   </div>
 
-  <main class="grid" id="grid"></main>
+  <main class="grid" id="grid">
+    <article class="card reveal" data-cat="hiburan" data-name="tv indo nonton tv indonesia gratis langsung di browser — 173 channel, kategori, pencarian, favorit, plus proxy biar channel yang ke-blok cors tetap bisa diputar. tv">
+      <div class="card-top">
+        <div class="icon tv">📺</div>
+        <span class="tag">TV</span>
+      </div>
+      <h3><a href="https://tv-indo-three.vercel.app" target="_blank" rel="noopener">TV Indo</a></h3>
+      <p class="desc">Nonton TV Indonesia gratis langsung di browser — 173 channel, kategori, pencarian, favorit, plus proxy biar channel yang ke-blok CORS tetap bisa diputar.</p>
+      <div class="url">tv-indo-three.vercel.app</div>
+      <div class="meta"><span>173 channel</span><span>Gratis</span><span>Tanpa daftar</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://tv-indo-three.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://tv-indo-three.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://tv-indo-three.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="toko" data-name="warung panel toko online + admin dalam satu web. kelola barang, pesanan, dan keuangan warung dari satu tempat. toko">
+      <div class="card-top">
+        <div class="icon store">🛒</div>
+        <span class="tag">Toko</span>
+      </div>
+      <h3><a href="https://warung-panel.vercel.app" target="_blank" rel="noopener">Warung Panel</a></h3>
+      <p class="desc">Toko online + admin dalam satu web. Kelola barang, pesanan, dan keuangan warung dari satu tempat.</p>
+      <div class="url">warung-panel.vercel.app</div>
+      <div class="meta"><span>Next.js 15</span><span>Toko + Admin</span><span>Rupiah</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://warung-panel.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://warung-panel.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://warung-panel.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="vpn" data-name="vpn rental sewa vpn murah langsung aktif. ssh, vmess, vless, trojan — paket per server dan durasi, mulai rp5.000. vpn">
+      <div class="card-top">
+        <div class="icon vpn">🛡️</div>
+        <span class="tag">VPN</span>
+      </div>
+      <h3><a href="https://vpn-rental.vercel.app" target="_blank" rel="noopener">VPN Rental</a></h3>
+      <p class="desc">Sewa VPN murah langsung aktif. SSH, VMess, VLESS, Trojan — paket per server dan durasi, mulai Rp5.000.</p>
+      <div class="url">vpn-rental.vercel.app</div>
+      <div class="meta"><span>SSH · VMess · VLESS</span><span>Mulai Rp5.000</span><span>8 paket</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://vpn-rental.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://vpn-rental.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://vpn-rental.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="tools" data-name="slowx converter ubah config akun slowdns jadi link slowdns:// + qr code. isi form, scan, langsung konek di slowx. tools">
+      <div class="card-top">
+        <div class="icon tool">⚡</div>
+        <span class="tag">Tools</span>
+      </div>
+      <h3><a href="https://slowx-converter.vercel.app" target="_blank" rel="noopener">SlowX Converter</a></h3>
+      <p class="desc">Ubah config akun SlowDNS jadi link slowdns:// + QR code. Isi form, scan, langsung konek di SlowX.</p>
+      <div class="url">slowx-converter.vercel.app</div>
+      <div class="meta"><span>100% di browser</span><span>QR code</span><span>Tanpa server</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://slowx-converter.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://slowx-converter.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://slowx-converter.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="dashboard" data-name="slowx-stats dashboard statistik slowx: siapa yang lagi online, riwayat konek, plus form pengumuman & update buat aplikasi. dashboard">
+      <div class="card-top">
+        <div class="icon stat">📊</div>
+        <span class="tag">Dashboard</span>
+      </div>
+      <h3><a href="https://slowx-stats.vercel.app" target="_blank" rel="noopener">slowx-stats</a></h3>
+      <p class="desc">Dashboard statistik SlowX: siapa yang lagi online, riwayat konek, plus form pengumuman &amp; update buat aplikasi.</p>
+      <div class="url">slowx-stats.vercel.app</div>
+      <div class="meta"><span>Login admin</span><span>Online real-time</span><span>KV Redis</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://slowx-stats.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://slowx-stats.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://slowx-stats.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="dashboard" data-name="virtuedash dashboard garapan: semua modal, hasil, dan untung rugi — terverifikasi on-chain. dashboard">
+      <div class="card-top">
+        <div class="icon stat">📈</div>
+        <span class="tag">Dashboard</span>
+      </div>
+      <h3><a href="https://virtuedash-mochmaulana347s-projects.vercel.app" target="_blank" rel="noopener">VirtueDash</a></h3>
+      <p class="desc">Dashboard garapan: semua modal, hasil, dan untung rugi — terverifikasi on-chain.</p>
+      <div class="url">virtuedash-mochmaulana347s-projects.vercel.app</div>
+      <div class="meta"><span>Crypto</span><span>On-chain</span><span>Garapan</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://virtuedash-mochmaulana347s-projects.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://virtuedash-mochmaulana347s-projects.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://virtuedash-mochmaulana347s-projects.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="tools" data-name="vesper affiliate vesper affiliate generator — bikin link afiliasi cepat. tools">
+      <div class="card-top">
+        <div class="icon tool">🔗</div>
+        <span class="tag">Tools</span>
+      </div>
+      <h3><a href="https://vesper-af.vercel.app" target="_blank" rel="noopener">VESPER Affiliate</a></h3>
+      <p class="desc">VESPER Affiliate Generator — bikin link afiliasi cepat.</p>
+      <div class="url">vesper-af.vercel.app</div>
+      <div class="meta"><span>Flask</span><span>Affiliate</span><span>Generator</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://vesper-af.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://vesper-af.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://vesper-af.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="tools" data-name="clipmaster ai pro auto clipper — potong klip video otomatis pakai ai. tools">
+      <div class="card-top">
+        <div class="icon tool">✂️</div>
+        <span class="tag">Tools</span>
+      </div>
+      <h3><a href="https://autoclipper-xi.vercel.app" target="_blank" rel="noopener">ClipMaster AI</a></h3>
+      <p class="desc">Pro Auto Clipper — potong klip video otomatis pakai AI.</p>
+      <div class="url">autoclipper-xi.vercel.app</div>
+      <div class="meta"><span>AI</span><span>Auto Clipper</span><span>Video</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://autoclipper-xi.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://autoclipper-xi.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://autoclipper-xi.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="toko" data-name="veyna marketplace veyna — premium marketplace. toko">
+      <div class="card-top">
+        <div class="icon store">🏪</div>
+        <span class="tag">Toko</span>
+      </div>
+      <h3><a href="https://virtueweb.vercel.app" target="_blank" rel="noopener">VEYNA Marketplace</a></h3>
+      <p class="desc">VEYNA — premium marketplace.</p>
+      <div class="url">virtueweb.vercel.app</div>
+      <div class="meta"><span>Marketplace</span><span>Premium</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://virtueweb.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://virtueweb.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://virtueweb.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="toko" data-name="katalog demo katalog demo — contoh katalog produk. toko">
+      <div class="card-top">
+        <div class="icon store">📖</div>
+        <span class="tag">Toko</span>
+      </div>
+      <h3><a href="https://katalog1.vercel.app" target="_blank" rel="noopener">Katalog Demo</a></h3>
+      <p class="desc">Katalog demo — contoh katalog produk.</p>
+      <div class="url">katalog1.vercel.app</div>
+      <div class="meta"><span>Demo</span><span>Katalog</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://katalog1.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://katalog1.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://katalog1.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="lainnya" data-name="cool cat catalog mint a cool cat & belajar web3 — 100% ramah pemula. web3">
+      <div class="card-top">
+        <div class="icon tool">🐱</div>
+        <span class="tag">Web3</span>
+      </div>
+      <h3><a href="https://katalog.vercel.app" target="_blank" rel="noopener">Cool Cat Catalog</a></h3>
+      <p class="desc">Mint a Cool Cat &amp; belajar Web3 — 100% ramah pemula.</p>
+      <div class="url">katalog.vercel.app</div>
+      <div class="meta"><span>Web3</span><span>Cool Cats</span><span>Belajar</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://katalog.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://katalog.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://katalog.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="lainnya" data-name="landing page landing page gaya happy hues. landing">
+      <div class="card-top">
+        <div class="icon tool">🎨</div>
+        <span class="tag">Landing</span>
+      </div>
+      <h3><a href="https://landingpage-seven-blush.vercel.app" target="_blank" rel="noopener">Landing Page</a></h3>
+      <p class="desc">Landing page gaya Happy Hues.</p>
+      <div class="url">landingpage-seven-blush.vercel.app</div>
+      <div class="meta"><span>Landing Page</span><span>Template</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://landingpage-seven-blush.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://landingpage-seven-blush.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://landingpage-seven-blush.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+
+    <article class="card reveal" data-cat="lainnya" data-name="hacker theme halaman bertema hacker. web">
+      <div class="card-top">
+        <div class="icon stat">💻</div>
+        <span class="tag">Web</span>
+      </div>
+      <h3><a href="https://virtue-five.vercel.app" target="_blank" rel="noopener">Hacker Theme</a></h3>
+      <p class="desc">Halaman bertema hacker.</p>
+      <div class="url">virtue-five.vercel.app</div>
+      <div class="meta"><span>Hacker Theme</span><span>Template</span></div>
+      <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="https://virtue-five.vercel.app"><span class="dot"></span>mengecek…</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://virtue-five.vercel.app" target="_blank" rel="noopener">Buka web ↗</a>
+        <button class="btn btn-ghost" data-copy="https://virtue-five.vercel.app" title="Salin link">⧉ Salin</button>
+      </div>
+    </article>
+  </main>
 
   <div class="empty" id="empty">
     <b>Nggak ketemu 😶</b>
@@ -288,109 +537,9 @@ footer a:hover{color:var(--lime)}
 </div>
 
 <script>
-const SITES = [
-  {
-    name:"TV Indo", cat:"hiburan", icon:"📺", iconClass:"tv", tag:"TV",
-    url:"https://tv-indo-three.vercel.app",
-    desc:"Nonton TV Indonesia gratis langsung di browser — 173 channel, kategori, pencarian, favorit, plus proxy biar channel yang ke-blok CORS tetap bisa diputar.",
-    meta:["173 channel","Gratis","Tanpa daftar"]
-  },
-  {
-    name:"Warung Panel", cat:"toko", icon:"🛒", iconClass:"store", tag:"Toko",
-    url:"https://warung-panel.vercel.app",
-    desc:"Toko online + admin dalam satu web. Kelola barang, pesanan, dan keuangan warung dari satu tempat.",
-    meta:["Next.js 15","Toko + Admin","Rupiah"]
-  },
-  {
-    name:"VPN Rental", cat:"vpn", icon:"🛡️", iconClass:"vpn", tag:"VPN",
-    url:"https://vpn-rental.vercel.app",
-    desc:"Sewa VPN murah langsung aktif. SSH, VMess, VLESS, Trojan — paket per server dan durasi, mulai Rp5.000.",
-    meta:["SSH · VMess · VLESS","Mulai Rp5.000","8 paket"]
-  },
-  {
-    name:"SlowX Converter", cat:"tools", icon:"⚡", iconClass:"tool", tag:"Tools",
-    url:"https://slowx-converter.vercel.app",
-    desc:"Ubah config akun SlowDNS jadi link slowdns:// + QR code. Isi form, scan, langsung konek di SlowX.",
-    meta:["100% di browser","QR code","Tanpa server"]
-  },
-  {
-    name:"slowx-stats", cat:"dashboard", icon:"📊", iconClass:"stat", tag:"Dashboard",
-    url:"https://slowx-stats.vercel.app",
-    desc:"Dashboard statistik SlowX: siapa yang lagi online, riwayat konek, plus form pengumuman & update buat aplikasi.",
-    meta:["Login admin","Online real-time","KV Redis"]
-  },
-  {
-    name:"VirtueDash", cat:"dashboard", icon:"📈", iconClass:"stat", tag:"Dashboard",
-    url:"https://crypto-dashboard-five-tawny.vercel.app",
-    desc:"Dashboard garapan: semua modal, hasil, dan untung rugi — terverifikasi on-chain.",
-    meta:["Crypto","On-chain","Garapan"]
-  },
-  {
-    name:"VESPER Affiliate", cat:"tools", icon:"🔗", iconClass:"tool", tag:"Tools",
-    url:"https://vesper-af.vercel.app",
-    desc:"VESPER Affiliate Generator — bikin link afiliasi cepat.",
-    meta:["Flask","Affiliate","Generator"]
-  },
-  {
-    name:"ClipMaster AI", cat:"tools", icon:"✂️", iconClass:"tool", tag:"Tools",
-    url:"https://autoclipper-xi.vercel.app",
-    desc:"Pro Auto Clipper — potong klip video otomatis pakai AI.",
-    meta:["AI","Auto Clipper","Video"]
-  },
-  {
-    name:"VEYNA Marketplace", cat:"toko", icon:"🏪", iconClass:"store", tag:"Toko",
-    url:"https://virtueweb.vercel.app",
-    desc:"VEYNA — premium marketplace.",
-    meta:["Marketplace","Premium"]
-  },
-  {
-    name:"Katalog Demo", cat:"toko", icon:"📖", iconClass:"store", tag:"Toko",
-    url:"https://katalog1.vercel.app",
-    desc:"Katalog demo — contoh katalog produk.",
-    meta:["Demo","Katalog"]
-  },
-  {
-    name:"Cool Cat Catalog", cat:"lainnya", icon:"🐱", iconClass:"tool", tag:"Web3",
-    url:"https://katalog.vercel.app",
-    desc:"Mint a Cool Cat & belajar Web3 — 100% ramah pemula.",
-    meta:["Web3","Cool Cats","Belajar"]
-  },
-  {
-    name:"Landing Page", cat:"lainnya", icon:"🎨", iconClass:"tool", tag:"Landing",
-    url:"https://landingpage-seven-blush.vercel.app",
-    desc:"Landing page gaya Happy Hues.",
-    meta:["Landing Page","Template"]
-  },
-  {
-    name:"Hacker Theme", cat:"lainnya", icon:"💻", iconClass:"stat", tag:"Web",
-    url:"https://virtue-five.vercel.app",
-    desc:"Halaman bertema hacker.",
-    meta:["Hacker Theme","Template"]
-  }
-];
-
-/* ---------- render cards ---------- */
-const grid = document.getElementById('grid');
-grid.innerHTML = SITES.map((s,i)=>`
-  <article class="card reveal" data-cat="${s.cat}" data-name="${s.name.toLowerCase()} ${s.desc.toLowerCase()} ${s.tag.toLowerCase()}" style="transition-delay:${i*70}ms">
-    <div class="card-top">
-      <div class="icon ${s.iconClass}">${s.icon}</div>
-      <span class="tag">${s.tag}</span>
-    </div>
-    <h3><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></h3>
-    <p class="desc">${s.desc}</p>
-    <div class="url">${s.url.replace('https://','')}</div>
-    <div class="meta">${s.meta.map(m=>`<span>${m}</span>`).join('')}</div>
-    <div class="meta" style="margin-bottom:18px"><span class="status checking" data-status="${s.url}"><span class="dot"></span>mengecek…</span></div>
-    <div class="actions">
-      <a class="btn btn-primary" href="${s.url}" target="_blank" rel="noopener">Buka web ↗</a>
-      <button class="btn btn-ghost" data-copy="${s.url}" title="Salin link">⧉ Salin</button>
-    </div>
-  </article>`).join('');
-
-/* ---------- marquee ---------- */
-const items = SITES.map(s=>s.name.toUpperCase()).join(' <i>✦</i> ');
-document.getElementById('marquee-track').textContent = '';
+/* ---------- marquee (from static cards) ---------- */
+const names = [...document.querySelectorAll('.card h3 a')].map(a=>a.textContent.trim().toUpperCase());
+const items = names.join(' <i>✦</i> ');
 document.getElementById('marquee-track').innerHTML = (items + ' <i>✦</i> ').repeat(2);
 
 /* ---------- reveal on scroll ---------- */
@@ -423,6 +572,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ---------- live status check (client-side) ---------- */
 let online = 0;
+const total = document.querySelectorAll('[data-status]').length;
 document.querySelectorAll('[data-status]').forEach(el=>{
   const url = el.dataset.status;
   const done = ok=>{
@@ -438,6 +588,7 @@ document.querySelectorAll('[data-status]').forEach(el=>{
 });
 
 /* ---------- search + filter ---------- */
+const grid = document.getElementById('grid');
 const searchInput = document.getElementById('search');
 let activeCat = 'all';
 function applyFilter(){
@@ -504,13 +655,15 @@ addEventListener('mousemove', e=>{ tx=e.clientX; ty=e.clientY; glow.style.opacit
 /* ---------- particle canvas ---------- */
 const cv = document.getElementById('bg-canvas'), ctx = cv.getContext('2d');
 let W, H, pts=[];
+const COLORS = ['139,92,246','34,211,238','232,121,249'];
 function resize(){
   W = cv.width = innerWidth; H = cv.height = innerHeight;
   pts = Array.from({length: Math.min(70, W/18)}, ()=>({
     x: Math.random()*W, y: Math.random()*H,
     r: Math.random()*1.8+.6,
     vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35,
-    a: Math.random()*.5+.15
+    a: Math.random()*.5+.15,
+    c: COLORS[Math.floor(Math.random()*COLORS.length)]
   }));
 }
 resize(); addEventListener('resize', resize);
@@ -521,13 +674,13 @@ resize(); addEventListener('resize', resize);
     if(p.x<0||p.x>W) p.vx*=-1;
     if(p.y<0||p.y>H) p.vy*=-1;
     ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,7);
-    ctx.fillStyle=`rgba(184,241,53,${p.a})`; ctx.fill();
+    ctx.fillStyle=`rgba(${p.c},${p.a})`; ctx.fill();
   }
   for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
     const a=pts[i], b=pts[j], d=Math.hypot(a.x-b.x,a.y-b.y);
     if(d<130){
       ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y);
-      ctx.strokeStyle=`rgba(184,241,53,${(1-d/130)*.12})`; ctx.lineWidth=1; ctx.stroke();
+      ctx.strokeStyle=`rgba(139,92,246,${(1-d/130)*.12})`; ctx.lineWidth=1; ctx.stroke();
     }
   }
   requestAnimationFrame(draw);
